@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vicco Turmeric Night Cream · The Glow Has Roots (concept)</title>
+<meta name="description" content="A student campaign concept: Vicco Turmeric Night Cream, a haldi cream trusted since 1952, re-presented as a one-step night ritual. Not the official Vicco website.">
+<meta property="og:title" content="The marks don't have to stay.">
+<meta property="og:description" content="Haldi night cream with turmeric and sandalwood oil. One step before bed. A student campaign concept, not the official Vicco site.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFF4DF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-tube-carton-1600.webp" imagesrcset="img/hero-tube-carton-800.webp 800w, img/hero-tube-carton-1600.webp 1600w" imagesizes="(max-width: 900px) 90vw, 46vw">
+<style>
+/* ---------- Brand tokens (Brand Guidelines, 27 Oct 2026) ---------- */
+:root{
+  --cream:#FFF4DF; --yellow:#EAB82B; --charcoal:#332B25; --green:#314A36; --red:#C44822; --white:#FFFFFF;
+  --serif:"Fraunces","Lora",Georgia,serif;
+  --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter:clamp(16px,5.5vw,88px);
+  --maxw:1280px;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--charcoal);font:400 1.0625rem/1.6 var(--sans);text-rendering:optimizeLegibility;overflow-x:hidden}
+img,svg,video{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;font-optical-sizing:auto;letter-spacing:-.01em;line-height:1.04}
+h2{font-size:clamp(2.4rem,5.4vw,4.6rem)}
+.lede{font-size:clamp(1.1rem,1.5vw,1.3rem);line-height:1.55;max-width:36ch}
+.small{font-size:.875rem;opacity:.72}
+.label{font-size:.8125rem;opacity:.62}
+.skip{position:absolute;left:-999px;top:8px;background:var(--charcoal);color:var(--cream);padding:8px 12px;z-index:200}
+.skip:focus{left:8px}
+
+/* split-word mask animation targets */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.w>span{display:inline-block;will-change:transform}
+
+/* Media frames */
+.frame{position:relative;overflow:hidden;background:#e9dcc3}
+.frame img,.frame video{width:100%;height:100%;object-fit:cover}
+.frame .tag{position:absolute;left:12px;bottom:10px;font-size:.75rem;line-height:1;padding:.45em .7em;border-radius:999px;background:rgba(51,43,37,.62);color:var(--cream);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.parallax img{height:118%;margin-top:-9%}
+
+/* Wordmark */
+.wordmark{font:700 1.05rem/1 var(--sans);letter-spacing:.08em;text-decoration:none;display:inline-block;padding:.6em 0}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font:500 1rem/1 var(--sans);text-decoration:none;border-radius:999px;padding:1.05em 1.6em;border:0;cursor:pointer;transition:transform .2s var(--ease),background-color .2s}
+.btn:active{transform:scale(.97)}
+.btn-buy{background:var(--red);color:var(--white)}
+.btn-buy:hover{background:#a93c1b}
+.btn-dark{background:var(--charcoal);color:var(--cream)}
+.btn-dark:hover{background:#4a3f37}
+.btn-quiet{padding-left:0;padding-right:0;border-radius:0;background:none;text-decoration:underline;text-underline-offset:.3em;text-decoration-thickness:1px}
+.btn-quiet:hover{text-decoration-thickness:2px}
+
+/* ---------- Notice + header ---------- */
+.notice{background:var(--charcoal);color:var(--cream);font-size:.8125rem;line-height:1.4;text-align:center;padding:.65em var(--gutter)}
+.top{position:sticky;top:0;z-index:60;background:rgba(255,244,223,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:box-shadow .3s}
+.top.scrolled{box-shadow:0 1px 0 rgba(51,43,37,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px}
+.nav ul{list-style:none;display:flex;gap:28px;font-size:.9375rem}
+.nav ul a{text-decoration:none;opacity:.8}
+.nav ul a:hover{opacity:1;text-decoration:underline;text-underline-offset:.3em}
+.nav .btn{padding:.75em 1.15em;font-size:.9375rem}
+
+/* ---------- Hero ---------- */
+.hero{position:relative}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,64px);align-items:end;padding-top:clamp(32px,6vh,72px)}
+.hero h1{font-size:clamp(3.1rem,7.2vw,6.6rem);max-width:9ch}
+.hero h1 .m,.hero h1 .m span{color:var(--red)}
+.hero .lede{margin-top:28px}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;margin-top:36px;padding-bottom:clamp(56px,10vh,120px)}
+.hero-media{position:relative;z-index:3;align-self:end;margin-bottom:-120px}
+.hero-media .frame{aspect-ratio:1122/1402;border-radius:999px 999px 28px 28px;box-shadow:0 40px 60px -30px rgba(51,43,37,.35)}
+.band{position:relative;background:var(--yellow);min-height:clamp(200px,28vh,280px);display:flex;flex-direction:column;justify-content:flex-end}
+.band .wrap{width:100%;position:relative;padding-bottom:36px}
+.band p{font:600 clamp(1.7rem,3.4vw,2.7rem)/1.08 var(--serif);max-width:12ch;padding-left:52px}
+.rootline{position:absolute;left:var(--gutter);bottom:0;width:36px;height:calc(100% + 120px);pointer-events:none;overflow:visible}
+.rootline path{fill:none;stroke:var(--charcoal);stroke-width:1.5;stroke-linecap:round;vector-effect:non-scaling-stroke}
+
+/* ---------- Problem ---------- */
+.problem{padding:clamp(90px,10vw,150px) 0 clamp(90px,11vw,160px)}
+.problem-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,96px);align-items:center}
+.problem .frame{aspect-ratio:941/1300;border-radius:28px}
+.problem h2{max-width:10ch}
+.problem .lede{margin-top:28px}
+.problem p+p{margin-top:1em}
+.problem .copy{max-width:44ch}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px;max-width:520px}
+.pair .frame{aspect-ratio:4/5;border-radius:18px}
+
+/* ---------- Ritual (night) ---------- */
+.night{background:var(--charcoal);color:var(--cream);padding:clamp(90px,11vw,160px) 0}
+.ritual{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,96px);align-items:start}
+.night .lede{margin-top:20px;opacity:.85}
+.steps{list-style:none;margin-top:56px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:72px 1fr;gap:8px 20px;padding:36px 0;border-top:1px solid rgba(255,244,223,.22);opacity:.38;transition:opacity .5s var(--ease)}
+.steps li.on{opacity:1}
+.steps li::before{content:counter(s);grid-row:span 2;font:600 3.4rem/1 var(--serif);color:var(--yellow)}
+.steps h3{font-size:clamp(1.5rem,2.4vw,2rem)}
+.steps p{opacity:.85;max-width:34ch}
+.night .time{margin-top:24px;font-size:.9375rem;opacity:.7}
+.phone{position:sticky;top:100px}
+.phone .frame{aspect-ratio:9/16;border-radius:32px;max-height:78vh;margin-left:auto;background:#1f1a16;box-shadow:0 0 0 8px rgba(255,244,223,.06)}
+.vid-ctrl{position:absolute;right:12px;top:12px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(51,43,37,.7);color:var(--cream);cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(6px)}
+.vid-ctrl svg{width:20px;height:20px}
+
+/* ---------- Inside ---------- */
+.inside{padding:clamp(90px,11vw,160px) 0 clamp(70px,8vw,120px)}
+.inside-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
+.inside h2{max-width:11ch}
+.cinema{margin-top:56px}
+.cinema .frame{aspect-ratio:16/9;border-radius:28px;background:#1f1a16}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:64px;border-top:2px solid var(--charcoal)}
+.fact{padding:28px 32px 0 0}
+.fact+.fact{padding-left:32px;border-left:1px solid rgba(51,43,37,.2)}
+.fact .big{font:600 clamp(2rem,3.4vw,2.8rem)/1 var(--serif);margin-bottom:14px}
+.fact p{max-width:30ch}
+.never{margin-top:64px;padding:32px;background:var(--yellow);border-radius:24px;display:grid;grid-template-columns:auto 1fr;gap:12px 40px;align-items:baseline}
+.never strong{font:600 1.6rem/1.1 var(--serif)}
+.never p{max-width:62ch}
+
+/* ---------- Feed (horizontal) ---------- */
+.feed{padding:clamp(70px,8vw,120px) 0 clamp(90px,11vw,160px);overflow:hidden}
+.feed-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap}
+.feed-head .lede{max-width:34ch}
+.track-wrap{margin-top:56px}
+.track{display:flex;gap:24px;padding:0 var(--gutter);width:max-content}
+.card{flex:none;width:clamp(260px,28vw,400px)}
+.card .frame{aspect-ratio:4/5;border-radius:22px}
+.card.tall .frame{aspect-ratio:9/16;width:auto}
+.card.tall{width:clamp(220px,21vw,300px)}
+.card figcaption{margin-top:14px;font-size:.9375rem}
+.card figcaption b{font-family:var(--serif);font-weight:600;font-size:1.15rem;display:block;line-height:1.2}
+
+/* ---------- Roots Edition ---------- */
+.roots{background:var(--green);color:var(--cream);padding:clamp(90px,11vw,160px) 0}
+.roots-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
+.roots h2{max-width:10ch}
+.roots-media{display:grid;grid-template-columns:1.55fr 1fr;gap:20px;margin-top:64px}
+.roots-media .frame{border-radius:24px;background:#24382a}
+.roots-media .wide{aspect-ratio:1672/941;align-self:end}
+.roots-media .tallp{aspect-ratio:1122/1402}
+.regions{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,56px);margin-top:56px;border-top:1px solid rgba(255,244,223,.25);padding-top:28px}
+.regions h3{font-size:1.5rem}
+.regions p{opacity:.82;margin-top:6px;max-width:30ch}
+.roots .label{margin-top:48px}
+
+/* ---------- Film ---------- */
+.film{background:var(--charcoal);color:var(--cream);padding:clamp(90px,11vw,160px) 0}
+.film-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap}
+.film .frame{aspect-ratio:16/9;border-radius:28px;margin-top:48px;background:#1f1a16}
+.play{position:absolute;inset:0;display:grid;place-items:center;background:rgba(31,26,22,.25);border:0;cursor:pointer;color:var(--charcoal);transition:background .3s}
+.play:hover{background:rgba(31,26,22,.1)}
+.play span{display:flex;align-items:center;gap:12px;background:var(--cream);border-radius:999px;padding:16px 26px 16px 20px;font:500 1.05rem/1 var(--sans);transition:transform .3s var(--ease)}
+.play:hover span{transform:scale(1.05)}
+.play svg{width:22px;height:22px}
+.film.playing .play{display:none}
+
+/* ---------- Shop ---------- */
+.shop{padding:clamp(90px,11vw,160px) 0}
+.shop .lede{margin-top:20px}
+.sizes{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:20px;margin-top:56px;align-items:stretch}
+.size{border-radius:26px;overflow:hidden;display:flex;flex-direction:column;background:#fff;box-shadow:0 0 0 1.5px rgba(51,43,37,.14)}
+.size.primary{background:var(--yellow);box-shadow:none}
+.size .frame{aspect-ratio:4/5}
+.size.primary .frame{aspect-ratio:auto;flex:none;height:clamp(300px,34vw,440px)}
+.size-body{padding:24px 26px 28px;display:flex;flex-direction:column;gap:8px;flex:1}
+.size .wt{font:600 2.4rem/1 var(--serif)}
+.size .for{font-weight:500}
+.size .grow{flex:1}
+.price{display:inline-block;align-self:flex-start;background:var(--red);color:var(--white);font:700 1.05rem/1 var(--sans);padding:.5em .8em;border-radius:6px;margin-top:6px}
+.size .btn{align-self:flex-start;margin-top:10px}
+.retail{margin-top:28px;max-width:70ch}
+
+/* ---------- FAQ ---------- */
+.faq{padding:0 0 clamp(90px,11vw,160px)}
+.faq-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;border-top:2px solid var(--charcoal);padding-top:40px}
+.faq h2{font-size:clamp(2rem,3.6vw,3rem)}
+details{border-bottom:1px solid rgba(51,43,37,.2)}
+summary{cursor:pointer;list-style:none;padding:22px 40px 22px 0;font:600 1.25rem/1.3 var(--serif);position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:18px;font:400 1.6rem/1 var(--sans);transition:transform .25s var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 24px;max-width:58ch}
+
+/* ---------- Footer ---------- */
+footer{background:var(--charcoal);color:var(--cream);padding:72px 0 120px}
+.foot{display:grid;grid-template-columns:1fr 1.4fr;gap:48px}
+.foot .wordmark{font-size:1.6rem}
+.foot p{max-width:62ch}
+.foot p+p{margin-top:1em}
+.foot .small{opacity:.65}
+
+/* ---------- Sticky buy bar (mobile) ---------- */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--cream);border-top:1px solid rgba(51,43,37,.2);padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:none;align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform .35s var(--ease)}
+.sticky.show{transform:none}
+.sticky .t{font-size:.9375rem;line-height:1.25}
+.sticky .t b{font-family:var(--serif);font-weight:600;font-size:1.05rem;display:block}
+.sticky .btn{padding:.9em 1.2em;white-space:nowrap}
+
+/* ---------- Responsive ---------- */
+@media (max-width:960px){
+  .nav ul{display:none}
+  .hero-grid,.problem-grid,.inside-head,.roots-head,.faq-grid,.foot,.ritual{grid-template-columns:1fr}
+  .hero-actions{padding-bottom:40px}
+  .hero-media{width:min(420px,86%);justify-self:center;margin-bottom:-110px}
+  .band{min-height:0}
+  .band .wrap{padding-top:140px;padding-bottom:28px}
+  .rootline{height:calc(100% + 20px)}
+  .problem{padding-top:72px}
+  .problem .frame{max-width:420px}
+  .phone{position:relative;top:0;order:-1}
+  .phone .frame{margin:0 auto;max-height:none;width:min(340px,82vw)}
+  .facts,.regions{grid-template-columns:1fr}
+  .fact,.fact+.fact{padding:24px 0;border-left:0}
+  .fact+.fact{border-top:1px solid rgba(51,43,37,.2)}
+  .never{grid-template-columns:1fr;padding:26px}
+  .roots-media{grid-template-columns:1fr}
+  .track{overflow-x:auto;width:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:12px;scrollbar-width:none}
+  .track::-webkit-scrollbar{display:none}
+  .card{scroll-snap-align:start;width:78vw}
+  .card.tall{width:62vw}
+  .sizes{grid-template-columns:1fr}
+  .sticky{display:flex}
+  .steps li{grid-template-columns:56px 1fr;padding:26px 0;opacity:1}
+  .steps li::before{font-size:2.6rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="notice" role="note">Student campaign concept by Group 2, AI in Marketing 2026. Not the official Vicco website. Images and films are AI-generated concepts.</div>
+
+<header class="top" id="top">
+  <div class="wrap nav">
+    <a class="wordmark" href="#main" aria-label="Vicco, back to top">VICCO</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#ritual">The ritual</a></li>
+      <li><a href="#inside">What's inside</a></li>
+      <li><a href="#roots">Roots Edition</a></li>
+      <li><a href="#film">Film</a></li>
+    </ul></nav>
+    <a class="btn btn-buy js-buy" data-size="15g" href="#">Buy for ₹83</a>
+  </div>
+</header>
+
+<main id="main">
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="h-h">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 id="h-h" class="split">The <span class="m">marks</span> don't have to stay.</h1>
+      <p class="lede hero-fade">Haldi night cream with turmeric and sandalwood oil. One step before bed, from a cream families have trusted since 1952.</p>
+      <div class="hero-actions hero-fade" id="heroCta">
+        <a class="btn btn-buy js-buy" data-size="15g" href="#">Try the 15 g for ₹83</a>
+        <a class="btn btn-quiet" href="#ritual">See the 30-second routine</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="frame" id="heroFrame">
+        <img src="img/hero-tube-carton-1600.webp" srcset="img/hero-tube-carton-800.webp 800w, img/hero-tube-carton-1600.webp 1600w" sizes="(max-width: 960px) 86vw, 46vw" width="1122" height="1402" alt="Vicco Turmeric Night Cream 70 g tube and carton in the proposed cream and turmeric-yellow pack design, beside a fresh turmeric root" fetchpriority="high">
+        <span class="tag">Concept image, AI generated</span>
+      </div>
+    </div>
+  </div>
+  <div class="band">
+    <div class="wrap">
+      <svg class="rootline" viewBox="0 0 40 400" preserveAspectRatio="none" aria-hidden="true">
+        <path class="grow" pathLength="1" d="M14,392 C10,340 22,300 13,250 C5,205 20,170 12,120 C7,85 16,50 12,8"/>
+        <path class="hair" pathLength="1" d="M14,392 C10,382 4,378 1,372"/>
+        <path class="hair" pathLength="1" d="M14,375 C20,366 27,362 34,360"/>
+        <path class="hair" pathLength="1" d="M13,352 C8,344 4,340 1,334"/>
+        <path class="hair" pathLength="1" d="M14,334 C20,326 26,324 31,322"/>
+      </svg>
+      <p class="split">The glow has roots.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="problem" aria-labelledby="p-h">
+  <div class="wrap problem-grid">
+    <div class="frame parallax reveal">
+      <img src="img/apply-mirror-1600.webp" srcset="img/apply-mirror-800.webp 800w, img/apply-mirror-1600.webp 1600w" sizes="(max-width: 960px) 90vw, 36vw" width="941" height="1672" loading="lazy" alt="A young woman with visible post-pimple marks dabbing a small dot of turmeric night cream onto her cheek at the bathroom mirror">
+      <span class="tag">Concept image, AI generated</span>
+    </div>
+    <div class="copy">
+      <h2 id="p-h" class="split">Pimple gaya. Daag reh gaya?</h2>
+      <p class="lede">The pimple went in three days. The mark it left is still there three weeks later.</p>
+      <p style="margin-top:1em">Your shelf is full of serums that each want their own step and their own budget. This is the opposite: one small tube, one step at night, and an ingredient your mother already trusts.</p>
+      <div class="pair">
+        <div class="frame reveal"><img src="img/ad-mum-shelf-800.webp" width="800" height="1000" loading="lazy" alt="Campaign ad: a mother hands her daughter the tube, headline 'Your mum's shelf had it first'"></div>
+        <div class="frame reveal"><img src="img/still-life-800.webp" width="800" height="800" loading="lazy" alt="The tube on dark slate with fresh turmeric root, turmeric powder and sandalwood sticks"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RITUAL ================= -->
+<section class="night" id="ritual" aria-labelledby="r-h">
+  <div class="wrap ritual">
+    <div>
+      <h2 id="r-h" class="split">One step tonight.</h2>
+      <p class="lede">It goes on last, after you wash your face, and works while you sleep.</p>
+      <ol class="steps">
+        <li><h3>Wash off the day</h3><p>Use your usual cleanser and pat your skin dry.</p></li>
+        <li><h3>Apply a small dot</h3><p>A pea-sized amount is enough. Blend it in gently until it disappears into the skin.</p></li>
+        <li><h3>Phone down. Sleep.</h3><p>Leave it on overnight. Rinse in the morning and get on with your day.</p></li>
+      </ol>
+      <p class="time">Use it every night. Results vary from person to person, so give it a few weeks.</p>
+    </div>
+    <div class="phone">
+      <div class="frame">
+        <video class="autovid" muted playsinline loop preload="none" poster="vid/night-routine.jpg" aria-label="Creator-style video: a 30-second night routine with the 15 g tube">
+          <source src="vid/night-routine.mp4" type="video/mp4">
+        </video>
+        <button class="vid-ctrl js-sound" type="button" aria-label="Turn sound on" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="on-only" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" style="display:none"/><path class="off-only" d="m22 9-6 6M16 9l6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSIDE ================= -->
+<section class="inside" id="inside" aria-labelledby="i-h">
+  <div class="wrap">
+    <div class="inside-head">
+      <h2 id="i-h" class="split">What's inside the tube.</h2>
+      <p class="lede">Ingredients your kitchen knows, in a formula Vicco has made for over seventy years.</p>
+    </div>
+  </div>
+  <div class="wrap cinema">
+    <div class="frame" id="cinema">
+      <video class="autovid" muted playsinline loop preload="none" poster="vid/ingredients-loop.jpg" aria-label="Turmeric root, turmeric powder, sandalwood and cream swirling together">
+        <source src="vid/ingredients-loop.mp4" type="video/mp4">
+      </video>
+      <span class="tag">Concept video, AI generated</span>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact"><div class="big">Turmeric</div><p>Haldi, the root at the heart of every Indian skincare ritual, from ubtan to the morning of a wedding.</p></div>
+      <div class="fact"><div class="big">Sandalwood oil</div><p>Soft, warm and familiar. It keeps the cream rich enough to leave on overnight.</p></div>
+      <div class="fact"><div class="big">Since 1952</div><p>The same family company, the same haldi cream, now in a tube made for your routine.</p></div>
+    </div>
+    <div class="never">
+      <strong>What it isn't</strong>
+      <p>It isn't a fairness cream and it doesn't change your skin tone. Glow here means skin that looks rested and cared for, in your own colour.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEED ================= -->
+<section class="feed" aria-labelledby="c-h">
+  <div class="wrap feed-head">
+    <h2 id="c-h" class="split">Seen on your feed.</h2>
+    <p class="lede">One idea, said six ways: for the hostel, the late scroll, your mum and the haldi ceremony.</p>
+  </div>
+  <div class="track-wrap" id="trackWrap">
+    <div class="track" id="track">
+      <figure class="card"><div class="frame"><img src="img/ad-last-scroll-800.webp" width="800" height="1000" loading="lazy" alt="Ad: woman in bed at night applying the cream, headline 'Last scroll. Phir haldi.'"></div><figcaption><b>Last scroll. Phir haldi.</b>Instagram feed post</figcaption></figure>
+      <figure class="card tall"><div class="frame"><img src="img/ad-bunk-bed-800.webp" width="800" height="1421" loading="lazy" alt="Ad: two roommates laughing on a hostel bunk bed, headline '11 pm. Lights off. Haldi on.'"></div><figcaption><b>11 pm. Lights off. Haldi on.</b>Story and Reel cover</figcaption></figure>
+      <figure class="card"><div class="frame"><img src="img/ad-cold-coffee-800.webp" width="800" height="1000" loading="lazy" alt="Ad: a hand holding the 15 g tube at a study desk, headline '₹83. Less than your cold coffee.'"></div><figcaption><b>₹83. Less than your cold coffee.</b>Trial-pack ad</figcaption></figure>
+      <figure class="card tall"><div class="frame"><video class="autovid" muted playsinline loop preload="none" poster="vid/pocket-reel.jpg" aria-label="Reel: the 15 g tube dropped into a pencil pouch beside a glass of chai"><source src="vid/pocket-reel.mp4" type="video/mp4"></video></div><figcaption><b>Fits in your pencil pouch.</b>7-second Reel</figcaption></figure>
+      <figure class="card"><div class="frame"><img src="img/ad-mum-shelf-800.webp" width="800" height="1000" loading="lazy" alt="Ad: mother and daughter sharing the tube, headline 'Your mum's shelf had it first.'"></div><figcaption><b>Your mum's shelf had it first.</b>Heritage post</figcaption></figure>
+      <figure class="card"><div class="frame"><img src="img/ad-haldi-800.webp" width="800" height="877" loading="lazy" alt="Ad: friends at a haldi ceremony with a tray of tubes as favours, headline 'Take a little haldi home.'"></div><figcaption><b>Take a little haldi home.</b>Wedding-season favour</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROOTS EDITION ================= -->
+<section class="roots" id="roots" aria-labelledby="e-h">
+  <div class="wrap">
+    <div class="roots-head">
+      <h2 id="e-h" class="split">The Roots Edition.</h2>
+      <p class="lede">Three limited tubes, each wrapped in art from a region where India's turmeric grows.</p>
+    </div>
+    <div class="roots-media">
+      <div class="frame wide reveal"><img src="img/roots-three-1600.webp" srcset="img/roots-three-800.webp 800w, img/roots-three-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 58vw" width="1672" height="941" loading="lazy" alt="Three Roots Edition tubes whose yellow bands carry Warli, kolam and Cheriyal-style art panels"><span class="tag">Concept image, AI generated</span></div>
+      <div class="frame tallp reveal"><img src="img/roots-poster-800.webp" srcset="img/roots-poster-800.webp 800w, img/roots-poster-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 36vw" width="1122" height="1402" loading="lazy" alt="Roots Edition poster: 'Every glow starts somewhere', three tubes above Maharashtra, Tamil Nadu and Telangana art"></div>
+    </div>
+    <div class="regions">
+      <div><h3>Sangli, Maharashtra</h3><p>A Warli-style panel from the Sangli turmeric belt.</p></div>
+      <div><h3>Erode, Tamil Nadu</h3><p>A kolam-style panel from the town known as turmeric city.</p></div>
+      <div><h3>Nizamabad, Telangana</h3><p>A Cheriyal-scroll-style panel from one of India's largest turmeric markets.</p></div>
+    </div>
+    <p class="label">Proposed collaboration with young regional illustrators, concept only.</p>
+  </div>
+</section>
+
+<!-- ================= FILM ================= -->
+<section class="film" id="film" aria-labelledby="f2-h">
+  <div class="wrap">
+    <div class="film-head">
+      <h2 id="f2-h" class="split">Watch the film.</h2>
+      <p class="lede">Twenty-three seconds, from root to tube.</p>
+    </div>
+    <div class="frame">
+      <video id="filmVid" playsinline preload="none" poster="vid/hero-film.jpg" aria-label="Campaign film: turmeric, sandalwood and cream come together into the Vicco Turmeric Night Cream tube">
+        <source src="vid/hero-film.mp4" type="video/mp4">
+      </video>
+      <button class="play" type="button" id="playFilm" aria-label="Play the film with sound">
+        <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg>Play the film</span>
+      </button>
+    </div>
+    <p class="label" style="margin-top:16px">Concept video, AI generated.</p>
+  </div>
+</section>
+
+<!-- ================= SHOP ================= -->
+<section class="shop" id="shop" aria-labelledby="s-h">
+  <div class="wrap">
+    <h2 id="s-h" class="split">Start with the small tube.</h2>
+    <p class="lede">Try it for a few weeks. If it earns its place on your shelf, move up a size.</p>
+    <div class="sizes">
+      <div class="size primary">
+        <div class="frame parallax"><img src="img/hand-15g-1600.webp" srcset="img/hand-15g-800.webp 800w, img/hand-15g-1600.webp 1600w" sizes="(max-width: 960px) 92vw, 38vw" width="1122" height="1402" loading="lazy" alt="A hand holding the 15 g trial tube against a dark background"></div>
+        <div class="size-body">
+          <div class="wt">15 g</div>
+          <div class="for">Trial pack</div>
+          <p>About a month of nightly use. The easiest way to find out if it suits you.</p>
+          <div class="grow"></div>
+          <span class="price">₹83</span>
+          <a class="btn btn-buy js-buy" data-size="15g" href="#">Buy the 15 g</a>
+        </div>
+      </div>
+      <div class="size">
+        <div class="frame"><img src="img/nightstand-800.webp" width="800" height="1423" loading="lazy" alt="The tube on a wooden nightstand under a warm lamp, beside a phone and a mug"></div>
+        <div class="size-body">
+          <div class="wt">30 g</div>
+          <div class="for">Hostel size</div>
+          <p>Fits a vanity pouch and lasts a semester of nights.</p>
+          <div class="grow"></div>
+          <a class="btn btn-dark js-buy" data-size="30g" href="#">See price and buy</a>
+        </div>
+      </div>
+      <div class="size">
+        <div class="frame"><img src="img/charcoal-carton-800.webp" width="800" height="877" loading="lazy" alt="The 70 g tube with its matching carton on a charcoal background"></div>
+        <div class="size-body">
+          <div class="wt">70 g</div>
+          <div class="for">Full size</div>
+          <p>The hero tube with its matching carton, for when it's part of the routine.</p>
+          <div class="grow"></div>
+          <a class="btn btn-dark js-buy" data-size="70g" href="#">See price and buy</a>
+        </div>
+      </div>
+    </div>
+    <p class="retail small">Buttons open a third-party retailer in a new tab. Prices and pack sizes there are set by the retailer and may differ from this concept.</p>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" aria-labelledby="q-h">
+  <div class="wrap faq-grid">
+    <h2 id="q-h">Before you try it.</h2>
+    <div>
+      <details><summary>Is this a fairness cream?</summary><p>No. It doesn't lighten or whiten skin, and we'll never say it does. It's a haldi night cream for skin that looks clearer and more even over time.</p></details>
+      <details><summary>Will it remove my pimple marks?</summary><p>No cream can promise that, and you should be wary of any that does. What it gives you is a simple nightly step with turmeric and sandalwood oil. Everyone's skin responds differently.</p></details>
+      <details><summary>Can I use it with my other products?</summary><p>Use it as the last step at night. If you already use strong actives such as retinoids or acids, patch-test first and check with a dermatologist.</p></details>
+      <details><summary>Is it the same Vicco my mother used?</summary><p>Same haldi heritage, same family company. The tube, the routine and the way we talk about it are new.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <span class="wordmark">VICCO</span>
+      <p class="small" style="margin-top:12px">The glow has roots.</p>
+    </div>
+    <div>
+      <p>This page is a student campaign concept made by Group 2 for the AI in Marketing 2026 simulation. It is not affiliated with, endorsed by or operated by Vicco Laboratories.</p>
+      <p>Pack designs, the Turmeric Night Cream name, the Roots Edition and its collaborations are proposals. All people shown are AI-generated and fictional. Buy links go to independent retailers; we don't take orders or payments here.</p>
+      <p class="small">Patch-test before first use. For external use only.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky" aria-hidden="true">
+  <span class="t"><b>Try it tonight</b>15 g trial pack</span>
+  <a class="btn btn-buy js-buy" data-size="15g" href="#" tabindex="-1">₹83, buy now</a>
+</div>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script>
+/* ---- Where the buy buttons go. Swap these for your final product links. ---- */
+const BUY_LINKS = {
+  "15g": "https://www.amazon.in/s?k=vicco+turmeric+cream+15g",
+  "30g": "https://www.amazon.in/s?k=vicco+turmeric+cream+30g",
+  "70g": "https://www.amazon.in/s?k=vicco+turmeric+cream+70g"
+};
+document.querySelectorAll(".js-buy").forEach(a => {
+  a.href = BUY_LINKS[a.dataset.size] || BUY_LINKS["15g"];
+  a.target = "_blank"; a.rel = "noopener";
+});
+
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---- Header shadow + sticky mobile bar ---- */
+const top_ = document.getElementById("top"), sticky = document.getElementById("sticky"), heroCta = document.getElementById("heroCta");
+addEventListener("scroll", () => top_.classList.toggle("scrolled", scrollY > 8), {passive:true});
+if ("IntersectionObserver" in window){
+  new IntersectionObserver(([e]) => {
+    const show = !e.isIntersecting && e.boundingClientRect.top < 0;
+    sticky.classList.toggle("show", show);
+    sticky.setAttribute("aria-hidden", String(!show));
+    sticky.querySelector("a").tabIndex = show ? 0 : -1;
+  }).observe(heroCta);
+}
+
+/* ---- Ambient videos: play only while on screen ---- */
+const autovids = document.querySelectorAll(".autovid");
+if ("IntersectionObserver" in window){
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting){
+      if (v.preload === "none"){ v.preload = "auto"; v.load(); }
+      if (!reduce) v.play().catch(()=>{});
+    } else v.pause();
+  }), {threshold:.25});
+  autovids.forEach(v => io.observe(v));
+}
+/* sound toggle on the routine video */
+document.querySelectorAll(".js-sound").forEach(b => b.addEventListener("click", () => {
+  const v = b.parentElement.querySelector("video");
+  v.muted = !v.muted; if (!v.muted){ v.play().catch(()=>{}); }
+  b.setAttribute("aria-pressed", String(!v.muted));
+  b.setAttribute("aria-label", v.muted ? "Turn sound on" : "Turn sound off");
+  b.querySelector(".on-only").style.display = v.muted ? "none" : "";
+  b.querySelector(".off-only").style.display = v.muted ? "" : "none";
+}));
+/* film */
+const film = document.getElementById("filmVid");
+document.getElementById("playFilm").addEventListener("click", () => {
+  film.controls = true; film.muted = false;
+  document.getElementById("film").classList.add("playing");
+  film.play().catch(()=>{}); film.focus();
+});
+
+/* ---- Split headlines into masked words ---- */
+function split(el){
+  const walk = (node, out) => {
+    node.childNodes.forEach(n => {
+      if (n.nodeType === 3){
+        n.textContent.split(/(\s+)/).forEach(t => {
+          if (!t) return;
+          if (/^\s+$/.test(t)) out.appendChild(document.createTextNode(" "));
+          else { const w = document.createElement("span"); w.className = "w"; const i = document.createElement("span"); i.textContent = t; w.appendChild(i); out.appendChild(w); }
+        });
+      } else {
+        const c = n.cloneNode(false); walk(n, c); out.appendChild(c);
+      }
+    });
+  };
+  const frag = document.createDocumentFragment(); walk(el, frag);
+  el.setAttribute("aria-label", el.textContent.replace(/\s+/g," ").trim());
+  el.innerHTML = ""; el.appendChild(frag);
+  el.querySelectorAll(".w").forEach(w => w.setAttribute("aria-hidden","true"));
+}
+
+/* ---- Motion ---- */
+if (!reduce && window.gsap && window.ScrollTrigger){
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelectorAll(".split").forEach(split);
+  const E = "expo.out";
+
+  /* 1. Hero: the one orchestrated moment */
+  const tl = gsap.timeline({defaults:{ease:E}});
+  tl.from(".hero h1 .w>span", {yPercent:110, duration:1.1, stagger:.06})
+    .from("#heroFrame", {clipPath:"inset(100% 0% 0% 0% round 999px 999px 28px 28px)", duration:1.5, ease:"expo.inOut"}, 0.1)
+    .from("#heroFrame img", {scale:1.25, duration:2.2}, 0.1)
+    .from(".hero-fade", {y:24, opacity:0, duration:1, stagger:.12}, 0.55)
+    .from(".band", {scaleY:0, transformOrigin:"bottom", duration:1, ease:"expo.inOut"}, 0.2)
+    .fromTo(".rootline .grow", {strokeDasharray:1, strokeDashoffset:1}, {strokeDashoffset:0, duration:2, ease:"power2.inOut"}, 0.7)
+    .fromTo(".rootline .hair", {strokeDasharray:1, strokeDashoffset:1}, {strokeDashoffset:0, duration:.8, stagger:.12, ease:"power2.out"}, 0.8)
+    .from(".band .w>span", {yPercent:110, duration:1, stagger:.05}, 1.0)
+    .from("#heroFrame .tag", {opacity:0, duration:.6}, 1.4);
+  /* hero image drifts as you leave */
+  gsap.to("#heroFrame img", {yPercent:8, ease:"none", scrollTrigger:{trigger:".hero", start:"top top", end:"bottom top", scrub:true}});
+
+  /* 2. Section headlines rise word by word */
+  gsap.utils.toArray("main h2.split").forEach(h => {
+    gsap.from(h.querySelectorAll(".w>span"), {yPercent:110, duration:1, stagger:.06, ease:E,
+      scrollTrigger:{trigger:h, start:"top 85%"}});
+  });
+
+  /* 3. Image reveals: wipe up from the bottom, image settles */
+  gsap.utils.toArray(".reveal").forEach(f => {
+    const st = {trigger:f, start:"top 85%"};
+    gsap.from(f, {clipPath:"inset(30% 0% 0% 0%)", opacity:0, duration:1.3, ease:E, scrollTrigger:st});
+    const img = f.querySelector("img"); if (img && !f.classList.contains("parallax")) gsap.from(img, {scale:1.18, duration:1.8, ease:E, scrollTrigger:st});
+  });
+
+  /* 4. Parallax inside frames */
+  gsap.utils.toArray(".parallax img").forEach(img => {
+    gsap.fromTo(img, {yPercent:-6}, {yPercent:6, ease:"none", scrollTrigger:{trigger:img.parentElement, start:"top bottom", end:"bottom top", scrub:true}});
+  });
+
+  /* 5. Cinema video opens up to full width */
+  gsap.fromTo("#cinema", {scale:.84, borderRadius:"48px"}, {scale:1, borderRadius:"28px", ease:"none",
+    scrollTrigger:{trigger:"#cinema", start:"top 95%", end:"top 25%", scrub:true}});
+
+  /* 6. Ritual steps light up as you read */
+  const mm = gsap.matchMedia();
+  mm.add("(min-width: 961px)", () => {
+    document.querySelectorAll(".steps li").forEach(li => {
+      ScrollTrigger.create({trigger:li, start:"top 62%", end:"bottom 38%", toggleClass:{targets:li, className:"on"}});
+    });
+    /* 7. Feed: vertical scroll drives a horizontal gallery */
+    const track = document.getElementById("track");
+    const dist = () => track.scrollWidth - innerWidth;
+    gsap.to(track, {x:() => -dist(), ease:"none",
+      scrollTrigger:{trigger:"#trackWrap", start:"center center", end:() => "+=" + dist(), pin:".feed", pinSpacing:true, scrub:.6, invalidateOnRefresh:true, anticipatePin:1}});
+  });
+
+  /* 8. Facts and size cards: quick stagger on arrival */
+  gsap.from(".fact", {y:40, opacity:0, duration:1, stagger:.12, ease:E, scrollTrigger:{trigger:".facts", start:"top 85%"}});
+  gsap.from(".size", {y:60, opacity:0, duration:1.1, stagger:.12, ease:E, scrollTrigger:{trigger:".sizes", start:"top 85%"}});
+  gsap.from(".never", {scaleX:.9, opacity:0, duration:1, ease:E, scrollTrigger:{trigger:".never", start:"top 90%"}});
+
+  addEventListener("load", () => ScrollTrigger.refresh());
+} else {
+  document.querySelectorAll(".steps li").forEach(li => li.classList.add("on"));
+}
+</script>
+</body>
+</html>
